@@ -22,7 +22,6 @@ function deleteItem(button) {
 
 function toggleLike(button) {
     button.classList.toggle("liked");
-    updateTotal(); // Optionally update total when liking/unliking
 }
 
 function updateTotal() {
@@ -41,5 +40,7 @@ function updateTotal() {
     const cartTotalElement = document.getElementById("cart-total");
     if (cartTotalElement) {
         cartTotalElement.textContent = total.toFixed(2);
+    } else {
+        console.error("Cart total element not found.");
     }
 }

@@ -3,11 +3,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: beige;
+    background-color: whitesmoke;
 }
 
 .cart {
-    background-color: white;
+    background-color: beige;
     padding: 50px;
 }
 
@@ -15,6 +15,11 @@ body {
     display: flex;
     align-items: center;
     margin: 0 0 15px 0;
+    gap: 30px;
+}
+
+.cart button {
+    cursor: pointer;
 }
 
 .cart button:nth-child(2),
@@ -23,39 +28,27 @@ body {
     background-color: white;
     color: black;
     border: groove;
-}
-
-.quantity-btn {
     cursor: pointer;
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    margin: 0 5px;
-    border-radius: 50%;
-}
-
-.delete-btn {
-    cursor: pointer;
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    margin: 0 5px;
 }
 
 .like-btn {
     cursor: pointer;
-    /* background-color: black; */
-    color: #333;
-    border: none;
+    color: darkorange;
+    border: thick;
     padding: 5px 10px;
     margin: 0 5px;
     border-radius: 50%;
 }
 
 .like-btn .liked {
-    color: red !important;
+    color: blue;
+}
+
+
+.total-container {
+    margin: 60px;
+    font-size: x-large;
+    font-weight: 900;
 }
 
 .cart-total {
