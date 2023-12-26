@@ -20,8 +20,28 @@ function deleteItem(button) {
     updateTotal();
 }
 
-function toggleLike(button) {
-    button.classList.toggle("liked");
+
+
+//First heart button color change when clicked on
+var likeBtn1 = document.getElementById("like-btn1");
+function toggleLike1() {
+    if (likeBtn1.style.color == "red") {
+        likeBtn1.style.color = "black"
+    }
+    else {
+        likeBtn1.style.color = "red"
+    }
+}
+
+//Second heart button color changed when clicked on
+var likeBtn2 = document.getElementById("like-btn2");
+function toggleLike2() {
+    if (likeBtn2.style.color == "red") {
+        likeBtn2.style.color = "black"
+    }
+    else {
+        likeBtn2.style.color = "red"
+    }
 }
 
 function updateTotal() {

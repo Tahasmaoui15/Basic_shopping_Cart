@@ -33,17 +33,13 @@ body {
 
 .like-btn {
     cursor: pointer;
-    color: darkorange;
+    color: black;
     border: thick;
     padding: 5px 10px;
     margin: 0 5px;
     border-radius: 50%;
+    background-color: transparent;
 }
-
-.like-btn .liked {
-    color: blue;
-}
-
 
 .total-container {
     margin: 60px;

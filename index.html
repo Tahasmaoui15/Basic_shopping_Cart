@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2d954b5d0d.js" crossorigin="anonymous"></script>
     <title>Cart</title>
 </head>
 <body>
     <div id="cart" class="cart">
+            <!--First Product in Cart-->
         <div class="cart" id="cart">
             <div class="item" data-price="10">
                 <span class="item-name">Product A</span>
@@ -15,23 +17,28 @@
                 <span class="quantity">0</span>
                 <button onclick="adjustQuantity(this,1)">+</button>
                 <button onclick="deleteItem(this)">Delete</button>
-                <button class="like-btn" onclick="toggleLike(this)"> &hearts;</button>
+                    <!--Creation of like button with heart-->
+                <button  id="like-btn1" class="like-btn" onclick="toggleLike1()">
+                    <i class="fa-solid fa-heart"></i>
+                </button>
                 <span class="total"> $<span class="item-total">10.00</span> </span>
             </div>
-
+            <!--Second Product in Cart-->    
             <div class="item" data-price="20">
                 <span class="item-name">Product B</span>
                 <button onclick="adjustQuantity(this,-1)">-</button>
                 <span class="quantity">0</span>
                 <button onclick="adjustQuantity(this,1)">+</button>
                 <button onclick="deleteItem(this)">Delete</button>
-                <button class="like-btn" onclick="toggleLike(this)">&hearts;</button>
+                <button id="like-btn2" class="like-btn" onclick="toggleLike2()">
+                    <i class="fa-solid fa-heart"></i>
+                </button>
                 <span class="total"> $<span class="item-total">20.00</span></span>
             </div>
         </div>
 
     </div>
-
+            <!--Total Price-->
     <div class="total-container">
         <span>Total Price: $<span id="cart-total">0.00</span></span>
     </div>
