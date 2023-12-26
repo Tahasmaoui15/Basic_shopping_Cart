@@ -1,12 +1,9 @@
-document.addEventListener("DOMContentLoaded", function () {
-    updateTotal();
-});
-
+//Adjusting product quantity
 function adjustQuantity(button, change) {
     const quantityElement = button.parentElement.querySelector(".quantity");
     let quantity = parseInt(quantityElement.textContent) + change;
 
-    if (quantity < 0) {
+    if (quantity < 1) {
         quantity = 0;
     }
 
@@ -14,6 +11,8 @@ function adjustQuantity(button, change) {
     updateTotal();
 }
 
+
+//Delete Button
 function deleteItem(button) {
     const quantityElement = button.parentElement.querySelector(".quantity");
     quantityElement.textContent = "0";
@@ -44,6 +43,7 @@ function toggleLike2() {
     }
 }
 
+//Cart total
 function updateTotal() {
     const items = document.querySelectorAll(".item");
     let total = 0;
@@ -57,9 +57,9 @@ function updateTotal() {
         total += itemTotal;
     });
 
-    const cartTotalElement = document.getElementById("cart-total");
-    if (cartTotalElement) {
-        cartTotalElement.textContent = total.toFixed(2);
+    const cartTotal = document.getElementById("cart-total");
+    if (cartTotal) {
+        cartTotal.textContent = total.toFixed(2);
     } else {
         console.error("Cart total element not found.");
     }

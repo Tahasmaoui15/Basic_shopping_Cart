@@ -47,7 +47,6 @@ body {
     font-weight: 900;
 }
 
-.cart-total {
-    margin-top: 20px;
-    text-align: right;
+.total-container span {
+    color: seagreen;
 }
